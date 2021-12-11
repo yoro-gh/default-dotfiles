@@ -1,0 +1,27 @@
+# https://EditorConfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+# Two trailing spaces is a new line in markdown.
+trim_trailing_whitespace = false
+
+[*.{yaml,yml}]
+indent_size = 2
+
+[{Dockerfile,Makefile}]
+indent_style = tab
+
+[{*.sh,profile,*bash*,*zshrc*,*zprofile}]
+# https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd#examples
+indent_size = 2
+binary_next_line = true
+switch_case_indent = true
