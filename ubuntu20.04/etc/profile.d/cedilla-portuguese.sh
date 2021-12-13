@@ -20,5 +20,5 @@
 # display language is something else but Portuguese.
 #
 if [ "${LC_IDENTIFICATION%_*}" = 'pt' -a "${LANG%_*}" != 'pt' ]; then
-  export LC_CTYPE="${LC_IDENTIFICATION%.*}.UTF-8"
+    export LC_CTYPE="${LC_IDENTIFICATION%.*}.UTF-8"
 fi

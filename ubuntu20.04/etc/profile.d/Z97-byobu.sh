@@ -21,21 +21,21 @@
 #  b) LC_* is sent and receieved by most /etc/ssh/ssh*_config
 
 if [ -r "/usr/bin/byobu-launch" ]; then
-  if [ "$LC_BYOBU" = "0" ]; then
-    true
-  elif [ "$LC_BYOBU" = "1" ]; then
-    . /usr/bin/byobu-launch
-  elif [ -e "/etc/byobu/autolaunch" ]; then
-    . /usr/bin/byobu-launch
-  elif [ "$LC_TERMTYPE" = "byobu" ]; then
-    . /usr/bin/byobu-launch
-  elif [ "$LC_TERMTYPE" = "byobu-screen" ]; then
-    export BYOBU_BACKEND="screen"
-    . /usr/bin/byobu-launch
-  elif [ "$LC_TERMTYPE" = "byobu-tmux" ]; then
-    export BYOBU_BACKEND="tmux"
-    . /usr/bin/byobu-launch
-  fi
+    if [ "$LC_BYOBU" = "0" ]; then
+        true
+    elif [ "$LC_BYOBU" = "1" ]; then
+        . /usr/bin/byobu-launch
+    elif [ -e "/etc/byobu/autolaunch" ]; then
+        . /usr/bin/byobu-launch
+    elif [ "$LC_TERMTYPE" = "byobu" ]; then
+        . /usr/bin/byobu-launch
+    elif [ "$LC_TERMTYPE" = "byobu-screen" ]; then
+        export BYOBU_BACKEND="screen"
+        . /usr/bin/byobu-launch
+    elif [ "$LC_TERMTYPE" = "byobu-tmux" ]; then
+        export BYOBU_BACKEND="tmux"
+        . /usr/bin/byobu-launch
+    fi
 fi
 
 # vi: syntax=sh ts=4 noexpandtab
