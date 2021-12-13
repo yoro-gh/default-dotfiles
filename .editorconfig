@@ -22,6 +22,6 @@ indent_style = tab
 
 [{*.sh,profile,*bash*,*zshrc*,*zprofile}]
 # https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd#examples
-indent_size = 2
+indent_size = 4
 binary_next_line = true
 switch_case_indent = true

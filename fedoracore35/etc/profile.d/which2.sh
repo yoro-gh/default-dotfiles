@@ -6,15 +6,15 @@ which_opt="-f"
 which_shell="$(cat /proc/$$/comm)"
 
 if [ "$which_shell" = "ksh" ] || [ "$which_shell" = "mksh" ] || [ "$which_shell" = "zsh" ]; then
-  which_declare="typeset -f"
-  which_opt=""
+    which_declare="typeset -f"
+    which_opt=""
 fi
 
 which() {
-  (
-    alias
-    eval ${which_declare}
-  ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"
+    (
+        alias
+        eval ${which_declare}
+    ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"
 }
 
 export which_declare
